@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The homepage of Pixmart, that represents main features of the platform"
+    />
+    <title>Pixmart</title>
+    <link rel="icon" href="./images/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/constants.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header list">
+      <a href="./index.html" class="header__logo">
+        <h1>
+          <img
+            src="./images/icons/logo.svg"
+            alt="Pixmart logo"
+            width="108"
+            height="24"
+          />
+        </h1>
+      </a>
+      <nav class="header__navigation">
+        <ul class="navigation__list list">
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              About
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              Products
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              Creators
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="./contacts.html"
+              class="navigation__link button button__small button__navigation"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__assets-block list">
+        <form action="#" method="get" class="assets-block__searching">
+          <label for="asset-searching" class="hidden">Find asset</label>
+          <input
+            type="text"
+            class="searching__input input input__small"
+            id="asset-searching"
+            placeholder="Search for Digital Assets"
+          />
+          <button type="submit" class="hidden">Search</button>
+        </form>
+        <a
+          href="#"
+          class="assets-block__cart button button__primary button__square-medium"
+        >
+          <svg class="icon">
+            <use xlink:href="./images/icons/sprite.svg#bag"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="main">
+        <div class="main__main-information list list__column">
+          <strong class="main-information__highlite-text heading__first">
+            Craft Your <span class="float-place"></span> Success with Our
+            <span class="highlite-text__span">Digital</span>
+            Assets
+          </strong>
+          <p class="main-information__description heading__subhead">
+            From our inspiring illustrations to dynamic UI/UX kits, elevate your
+            projects with our premium digital design resources.
+          </p>
+          <div class="main-information__main-buttons list">
+            <a
+              href="#"
+              class="main-buttons__button button button__primary button__large"
+              >Shop Now</a
+            >
+            <a
+              href="#"
+              class="main-buttons__button button button__navigation button__large"
+            >
+              <svg class="icon">
+                <use xlink:href="./images/icons/sprite.svg#play"></use>
+              </svg>
+              Watch About Us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
