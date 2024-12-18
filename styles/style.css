@@ -48,6 +48,7 @@ h3 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow-x: hidden;
 }
 
 .list__column {
@@ -80,6 +81,11 @@ h3 {
   color: var(--primary-color);
 }
 
+.container__section {
+  margin: 0 auto;
+  padding: 3.75rem 5rem;
+}
+
 .button {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -89,6 +95,7 @@ h3 {
   align-items: center;
   gap: 0.5rem;
   transition: var(--standart-transition);
+  flex-shrink: 0;
 }
 
 .button:hover,
@@ -208,9 +215,8 @@ h3 {
 .main::after {
   content: "";
   position: absolute;
-  width: 100vw;
-  margin-left: -50vw;
-  left: 50%;
+  width: var(--screen-width);
+  left: calc((100% - (var(--screen-width))) / 2);
   top: 0;
   height: 100%;
   z-index: -2;
@@ -242,14 +248,66 @@ h3 {
 
 .main-information__highlite-text {
   letter-spacing: var(--heading-letter-spacing);
+  text-wrap: balance;
 }
 
-.float-place {
-  width: 100px;
-  height: 100px;
-  float: right;
+.main-information__description {
+  text-wrap: balance;
 }
 
 .main-information__main-buttons {
   gap: 1.5rem;
+}
+
+.products {
+  padding-top: 7.5rem;
+}
+
+.products__list {
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.products__list-item {
+  gap: 1.25rem;
+}
+
+.products__link .list-item__image,
+.products__link svg {
+  transition: var(--color-transition);
+}
+
+.products__link:active .list-item__image {
+  background-color: var(--primary-color);
+}
+
+.products__link:active svg {
+  color: #e0f2ff;
+}
+
+.products__title {
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.list-item__image {
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--card-background-color);
+  border-radius: 1.25rem;
+  display: grid;
+}
+
+.list-item__image svg {
+  width: 9.375rem;
+  height: 9.375rem;
+  place-self: center;
+  color: var(--primary-color);
+}
+
+@media (max-width: 1350px) {
+  .main {
+    padding: 8rem 40% 8rem 5rem;
+  }
 }
