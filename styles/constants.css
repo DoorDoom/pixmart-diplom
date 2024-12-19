@@ -4,11 +4,15 @@
   --font-heading: "Plus Jakarta Sans", Arial, sans-serif;
   --primary-color: #0265dc;
   --primary-text-color: #f5f8fb;
+  --fade-color: #2a3541b2;
+  --section-title-color: #0f73f6;
   --background-color: #f0f6fd;
   --card-background-color: #f4f7fa;
   --standart-transition: background-color 0.3s ease-out,
     border-color 0.3s ease-out, box-shadow 0.3s ease-out, color 0.3s ease-out;
+  --filter-transition: filter 0.3s ease-out;
   --color-transition: background-color 0.3s ease-out, color 0.3s ease-out;
   --heading-letter-spacing: -0.031rem;
   --screen-width: 100vw;
+  --card-border-radius: 1.25rem;
 }
