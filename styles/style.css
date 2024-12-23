@@ -604,7 +604,7 @@ h3 {
 }
 
 .trending-controller__button:last-of-type svg {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .trending__trending-list {
@@ -804,7 +804,7 @@ li:has(.plan-list__plan-item.best) {
 }
 
 .articles-header__arrow {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .articles__articles-list {
