@@ -12,6 +12,8 @@
   color: var(--text-color);
   margin: 0 auto;
   max-width: 1440px;
+  overflow: auto;
+  scrollbar-gutter: stable;
 }
 
 a {
@@ -55,9 +57,7 @@ h3 {
   box-shadow: 0 0.25rem 2.5rem 0 #1d395f14;
   border-radius: 0.625rem;
   background-color: #fff;
-  transform: translateZ(100px);
-  transition: height 1s ease;
-  overflow: hidden;
+  transition: height 0.5s ease-out;
 }
 
 .details__summary {
@@ -100,15 +100,53 @@ h3 {
 }
 
 .details[open] {
-  padding: 1.375rem;
+  padding: 1.42rem;
   border: 0.125rem solid var(--primary-color);
+  animation: details-start-animation;
+  animation-duration: 0.5s;
+  overflow: hidden;
 }
 
 .details:not([open]) {
-  height: 2rem;
+  animation: details-end-animation;
+  animation-duration: 0.5s;
 }
-.details[open] {
-  height: 9rem;
+
+@-webkit-keyframes details-start-animation {
+  from {
+    height: 2rem;
+  }
+  30% {
+    max-height: fit-content;
+    border: 0.125rem solid var(--primary-color);
+  }
+  to {
+    height: 40rem;
+    max-height: fit-content;
+  }
+}
+
+@-moz-keyframes details-start-animation {
+  from {
+    height: 2rem;
+  }
+  30% {
+    border: 0.125rem solid var(--primary-color);
+  }
+  to {
+    height: 9rem;
+  }
+}
+
+@keyframes details-end-animation {
+  from {
+    height: 10rem;
+    min-height: fit-content;
+  }
+  to {
+    height: 2rem;
+    min-height: fit-content;
+  }
 }
 
 .details[open] .details__summary {
@@ -117,10 +155,6 @@ h3 {
 
 .details[open] .details__summary::before {
   transform: rotate(90deg);
-}
-
-.details[open] > *:not(.details__summary) {
-  animation: sweep 0.3s ease-in;
 }
 
 .link {
@@ -223,7 +257,6 @@ h3 {
 }
 
 .text__section {
-  font-family: var(--font-heading);
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -393,8 +426,8 @@ h3 {
 .main::after {
   content: "";
   position: absolute;
-  width: 100vw;
-  left: calc((100% - 100vw) / 2);
+  width: var(--screen-width);
+  left: calc((100% - (var(--screen-width))) / 2);
   top: 0;
   height: 100%;
   z-index: -2;
@@ -949,6 +982,30 @@ li:has(.plan-list__plan-item.best) {
   content: "|";
   display: inline-block;
   margin-left: 0.375rem;
+}
+
+@supports (-webkit-appearance: none) {
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  * {
+    --screen-width: calc(100vw - 0.25rem);
+  }
 }
 
 @media (max-width: 1350px) {
