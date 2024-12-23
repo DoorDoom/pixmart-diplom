@@ -912,6 +912,7 @@ li:has(.plan-list__plan-item.best) {
   color: var(--fade-color);
   padding: 0;
   font-weight: 400;
+  display: inline-block;
 }
 
 .list-item__document-link {
@@ -942,6 +943,12 @@ li:has(.plan-list__plan-item.best) {
   padding: 1.125rem 2.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.document-list__list-item:not(.document-list__list-item:last-child):after {
+  content: "|";
+  display: inline-block;
+  margin-left: 0.375rem;
 }
 
 @media (max-width: 1350px) {
