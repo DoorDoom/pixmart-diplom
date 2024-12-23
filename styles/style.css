@@ -393,8 +393,8 @@ h3 {
 .main::after {
   content: "";
   position: absolute;
-  width: var(--screen-width);
-  left: calc((100% - (var(--screen-width))) / 2);
+  width: 100vw;
+  left: calc((100% - 100vw) / 2);
   top: 0;
   height: 100%;
   z-index: -2;

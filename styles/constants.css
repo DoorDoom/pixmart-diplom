@@ -17,7 +17,6 @@
   --color-transition: background-color 0.3s ease-out, color 0.3s ease-out,
     box-shadow 0.3s ease-out;
   --heading-letter-spacing: -0.031rem;
-  --screen-width: 100vw;
   --card-border-radius: 1.25rem;
   --focus-shadow: 0.125rem 0.125rem var(--color-focus),
     -0.125rem 0.125rem var(--color-focus), 0.125rem -0.125rem var(--color-focus),
