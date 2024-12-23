@@ -447,7 +447,7 @@ h3 {
 }
 
 .products__link .list-item__image,
-.products__link svg {
+.list-item__icon-image {
   transition: var(--color-transition);
 }
 
@@ -474,7 +474,7 @@ h3 {
   display: grid;
 }
 
-.list-item__image svg {
+.list-item__icon-image {
   width: 9.375rem;
   height: 9.375rem;
   place-self: center;

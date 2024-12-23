@@ -26,7 +26,7 @@
   <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <h1>
+        <h1 class="header__title">
           <img
             src="./images/icons/logo.svg"
             alt="Pixmart logo"
@@ -81,20 +81,22 @@
       </nav>
       <div class="header__assets-block list">
         <form action="#" method="get" class="assets-block__searching">
-          <label for="asset-searching" class="hidden">Find asset</label>
+          <label for="asset-searching" class="searching__label hidden"
+            >Find asset</label
+          >
           <input
             type="text"
             class="searching__input input input__small"
             id="asset-searching"
             placeholder="Search for Digital Assets"
           />
-          <button type="submit" class="hidden">Search</button>
+          <button type="submit" class="searching__button hidden">Search</button>
         </form>
         <a
           href="#"
-          class="assets-block__cart button button__primary button__square-medium"
+          class="assets-block__button button button__primary button__square-medium"
         >
-          <svg class="icon">
+          <svg class="assets-block__icon icon">
             <use xlink:href="./images/icons/sprite.svg#bag"></use>
           </svg>
         </a>
@@ -103,7 +105,9 @@
     <main>
       <section class="main">
         <div class="main__main-information list list__column">
-          <h2 class="hidden heading__section">Introduction</h2>
+          <h2 class="main-information__title hidden heading__section">
+            Introduction
+          </h2>
           <strong class="main-information__highlite-text heading__main-title">
             Craft Your Success with Our&nbsp;<span class="highlite-text__span"
               >Digital
@@ -124,7 +128,7 @@
               href="#"
               class="main-buttons__button button button__navigation button__large"
             >
-              <svg class="icon">
+              <svg class="main-buttons__icon icon">
                 <use xlink:href="./images/icons/sprite.svg#play"></use>
               </svg>
               Watch About Us
@@ -139,7 +143,7 @@
             <a class="products__link" href="./catalog.html">
               <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use xlink:href="./images/icons/sprite.svg#ui-kit"></use>
                   </svg>
                 </div>
@@ -149,9 +153,9 @@
           </li>
           <li>
             <a class="products__link" href="./catalog.html">
-              <article class="products__list-item list list__column">
+              <article class="list-item__product-article list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#social-media"
                     ></use>
@@ -167,7 +171,7 @@
             <a class="products__link" href="./catalog.html">
               <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#presentation"
                     ></use>
@@ -183,7 +187,7 @@
             <a class="products__link" href="./catalog.html">
               <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use xlink:href="./images/icons/sprite.svg#font"></use>
                   </svg>
                 </div>
@@ -195,7 +199,7 @@
             <a class="products__link" href="./catalog.html">
               <article class="products__list-item list list__column">
                 <div class="list-item__image">
-                  <svg>
+                  <svg class="list-item__icon-image">
                     <use
                       xlink:href="./images/icons/sprite.svg#illustration"
                     ></use>
@@ -871,7 +875,7 @@
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Company</h2>
-          <nav>
+          <nav class="summary-lists__navigation">
             <ul class="summary-lists__list list list__column">
               <li class="summary-lists__list-item">
                 <a
@@ -932,121 +936,125 @@
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Products</h2>
-          <ul class="summary-lists__list list list__column">
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Website
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Mobile App
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Social Media Feeds
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Presentation
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Product Mockups
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Illustrations
-              </a>
-            </li>
-          </ul>
+          <nav class="summary-lists__navigation">
+            <ul class="summary-lists__list list list__column">
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Website
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Mobile App
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Social Media Feeds
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Presentation
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Product Mockups
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Illustrations
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Account</h2>
-          <ul class="summary-lists__list list list__column">
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Your Cart
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Check Out
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Refund Policy
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Company Policy
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Send A Message
-              </a>
-            </li>
-            <li class="summary-lists__list-item">
-              <a
-                href="./index.html"
-                target="_blank"
-                class="list-item__link link"
-              >
-                Customer Support
-              </a>
-            </li>
-          </ul>
+          <nav class="summary-lists__navigation">
+            <ul class="summary-lists__list list list__column">
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Your Cart
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Check Out
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Refund Policy
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Company Policy
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Send A Message
+                </a>
+              </li>
+              <li class="summary-lists__list-item">
+                <a
+                  href="./index.html"
+                  target="_blank"
+                  class="list-item__link link"
+                >
+                  Customer Support
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div class="footer__cta list">
@@ -1055,7 +1063,7 @@
             href="#"
             class="cta-buttons__button button button__secondary button__square-big"
           >
-            <svg class="icon">
+            <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#twitter"></use>
             </svg>
           </a>
@@ -1063,7 +1071,7 @@
             href="#"
             class="cta-buttons__button button button__secondary button__square-big"
           >
-            <svg class="icon">
+            <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#facebook"></use>
             </svg>
           </a>
@@ -1071,7 +1079,7 @@
             href="#"
             class="cta-buttons__button button button__secondary button__square-big"
           >
-            <svg class="icon">
+            <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#telegram"></use>
             </svg>
           </a>
