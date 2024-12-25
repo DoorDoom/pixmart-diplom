@@ -881,6 +881,7 @@ li:has(.plan-list__plan-item.best) {
 
 .articles-list__article:first-of-type .article__image-container {
   flex-grow: 2;
+  max-height: 44rem;
 }
 
 .articles-list__article:first-of-type .article__image {
