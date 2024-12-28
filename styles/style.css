@@ -695,7 +695,11 @@ h3 {
 }
 
 .trending-card__trending-image {
-  transform: scaleX(1.11);
+  transform: translateX(2.7rem) scaleX(1.45);
+}
+
+.trending-card__trending-image[alt="real estate product"] {
+  transform: translateX(5.25rem) scaleX(1.675);
 }
 
 .trending-card__label {
@@ -851,6 +855,10 @@ li:has(.plan-list__plan-item.best) {
   align-items: center;
 }
 
+.articles-header__see-all {
+  word-spacing: 0.1rem;
+}
+
 .articles-header__arrow {
   transform: rotate(180deg);
 }
@@ -883,13 +891,17 @@ li:has(.plan-list__plan-item.best) {
   gap: 0;
 }
 
-.articles-list__article:first-of-type .article__image-container {
+.article__image-container:has(img[alt="article binabox"]) {
   flex-grow: 2;
   max-height: 43.75rem;
 }
 
-.articles-list__article:first-of-type .article__image {
-  height: 100%;
+.article__image[alt="article laurent"] {
+  transform: translateY(-0.125rem) scaleY(1.4);
+}
+
+.article__image[alt="article lotus"] {
+  transform: scaleY(1.625);
 }
 
 .article__image-container {
@@ -898,11 +910,6 @@ li:has(.plan-list__plan-item.best) {
   overflow: hidden;
   border-radius: var(--card-border-radius);
   transition: var(--color-transition);
-}
-
-.article__image {
-  width: 100%;
-  height: min-content;
 }
 
 .article__label {
@@ -974,7 +981,7 @@ li:has(.plan-list__plan-item.best) {
 }
 
 .summary-lists__list {
-  margin-top: 1rem;
+  margin-top: 1.125rem;
   gap: 0.5rem;
 }
 
