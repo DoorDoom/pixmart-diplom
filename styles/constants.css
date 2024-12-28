@@ -8,9 +8,13 @@
   --text-color: #0d0d15;
   --primary-text-color: #f5f8fb;
   --fade-color: #2a3541b2;
+  --invalid-color: #ea3829;
   --section-title-color: #0f73f6;
   --background-color: #f0f6fd;
   --card-background-color: #f4f7fa;
+  --input-border-color: #1f324745;
+  --input-active-color: #b5deff;
+  --input-hover-color: #147af3;
   --standart-transition: background-color 0.3s ease-out,
     border-color 0.3s ease-out, box-shadow 0.3s ease-out, color 0.3s ease-out;
   --filter-transition: filter 0.3s ease-out;
@@ -22,4 +26,8 @@
   --focus-shadow: 0.125rem 0.125rem var(--color-focus),
     -0.125rem 0.125rem var(--color-focus), 0.125rem -0.125rem var(--color-focus),
     -0.125rem -0.125rem var(--color-focus);
+  --invalid-shadow: 0.125rem 0.125rem var(--invalid-color),
+    -0.125rem 0.125rem var(--invalid-color),
+    0.125rem -0.125rem var(--invalid-color),
+    -0.125rem -0.125rem var(--invalid-color);
 }
