@@ -1381,6 +1381,7 @@ li:has(.plan-list__plan-item.best) {
   border: 0.125rem solid #fff;
   border-radius: var(--card-border-radius);
   gap: 2rem;
+  transition: var(--standart-transition);
 }
 
 .articles-viewer__related-article:hover {
@@ -1706,6 +1707,17 @@ li:has(.plan-list__plan-item.best) {
   font-size: 1rem;
   line-height: 1.5rem;
   text-transform: capitalize;
+}
+
+.last-article__link,
+.blog-category__link {
+  color: var(--text-color);
+  transition: var(--color-transition);
+}
+
+.last-article__link:hover,
+.blog-category__link:hover {
+  color: var(--primary-color);
 }
 
 .last-article__publish-time {
