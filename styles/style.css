@@ -761,12 +761,58 @@ h3 {
   box-shadow: var(--focus-shadow);
 }
 
+input:invalid:not(:focus) {
+  border: 0.1rem solid var(--invalid-color);
+}
+
+.contact-form__field:has(.input:invalid)::after {
+  content: "This field is required.";
+  position: absolute;
+  backface-visibility: hidden;
+  top: 100%;
+  left: 0;
+  color: var(--invalid-color);
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: border 0.3s ease-out, box-shadow 0.3s ease-out,
+    opacity 0.3s ease-out;
+  text-transform: none;
+}
+
+.contact-form__field:has(.input:invalid:not(:focus))::after {
+  opacity: 1;
+}
+
+.contact-form__field:has(.input[required]:valid)::after {
+  content: "Field validation is successful.";
+  position: absolute;
+  backface-visibility: hidden;
+  top: 100%;
+  left: 0;
+  color: #008f5d;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: border 0.3s ease-out, box-shadow 0.3s ease-out,
+    opacity 0.3s ease-out;
+  text-transform: none;
+}
+
+.contact-form__field:has(.input[required]:valid:focus)::after {
+  opacity: 1;
+}
+
 .input__large {
   padding: 1.125rem 1.375rem;
 }
 
 .input__small {
   padding: 0.625rem 0.75rem;
+}
+
+.input__form {
+  padding: 1.2rem 1.125rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .header {
@@ -1382,6 +1428,7 @@ li:has(.plan-list__plan-item.best) {
   border-radius: var(--card-border-radius);
   gap: 2rem;
   transition: var(--standart-transition);
+  box-shadow: 0 0.25rem 1.875rem 0 #1d395f0d;
 }
 
 .articles-viewer__related-article:hover {
@@ -1433,6 +1480,11 @@ li:has(.plan-list__plan-item.best) {
 .introduction__title {
   display: inline-block;
   width: 42%;
+}
+
+.introduction__highlite-text {
+  width: 54%;
+  letter-spacing: var(--heading-letter-spacing);
 }
 
 .filter-form__container {
@@ -1728,6 +1780,144 @@ li:has(.plan-list__plan-item.best) {
 .article__subtitle {
   color: var(--text-color);
   margin-bottom: 1rem;
+}
+
+.contacts {
+  padding-top: 4rem;
+  position: relative;
+  gap: 2.5rem;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc((100% - (var(--screen-width))) / 2);
+  width: var(--screen-width);
+  height: 55.625rem;
+  background-image: linear-gradient(var(--background-color), #fff);
+  z-index: -1;
+}
+
+.contacts__contact-form {
+  padding: 2rem;
+  border-radius: var(--card-border-radius);
+  background-color: #fff;
+  flex-grow: 2;
+  box-shadow: 0 0.25rem 2.5rem 0 #1d395f14;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  align-self: flex-end;
+}
+
+.contact-form__list {
+  gap: 1.4rem;
+}
+
+.contact-form__textarea {
+  height: 8.75rem;
+  resize: vertical;
+  min-height: 8.75rem;
+  max-height: 10rem;
+}
+
+.contact-form__finish-container {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 12rem;
+  gap: 0.375rem 2rem;
+}
+
+.finish-container__field .checkbox-label {
+  text-transform: none;
+  align-self: self-end;
+}
+
+.finish-container__field:last-of-type {
+  align-self: self-start;
+}
+
+.contact-form__submit {
+  grid-row: 1 / span 2;
+  grid-column-start: 2;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.contacts__about-us {
+  width: 38.625rem;
+  gap: 2rem;
+}
+
+.about-us__map {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  height: 19.625rem;
+  background-image: url("../images/pixmart-map.png");
+  background-position: 100% 71%;
+  background-size: 115% 150%;
+  border-radius: var(--card-border-radius);
+}
+
+.map__address-info {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1.5rem 17.25rem;
+  gap: 0 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 2.5rem 0 #1d395f14;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.map__address-info:hover {
+  box-shadow: var(--focus-shadow);
+}
+
+.address-info__image {
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.address__address {
+  color: var(--secondary-text-color);
+}
+
+.about-us__contacts {
+  gap: 0.5rem;
+}
+
+.contacts__contact {
+  font-weight: 600;
+  align-items: center;
+  transition: var(--color-transition);
+}
+
+.contacts__contact:hover {
+  color: var(--primary-color);
+}
+
+.about-us__to-shop {
+  padding: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.contact-form__field {
+  gap: 0.375rem;
+  position: relative;
+}
+
+.contact-form__select {
+  width: calc(100% - 2.375rem);
+  padding: 1.25rem 1.125rem;
+  font-weight: 400;
 }
 
 .footer {
