@@ -14,6 +14,8 @@
   width: 1440px;
   overflow: auto;
   scrollbar-gutter: stable;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -74,6 +76,7 @@ h3 {
   transition: var(--standart-transition);
   flex-shrink: 0;
   width: fit-content;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -1418,6 +1421,7 @@ li:has(.plan-list__plan-item.best) {
   margin-top: 2rem;
   gap: 1.55rem;
   margin-bottom: 2.5rem;
+  overflow: auto;
 }
 
 .articles-viewer__related-article {
@@ -1548,6 +1552,10 @@ li:has(.plan-list__plan-item.best) {
   flex-basis: 100%;
 }
 
+.tags__chip-list {
+  overflow: auto;
+}
+
 .chip-list__chip-link {
   text-transform: capitalize;
   padding: 0.3rem 0.7rem;
@@ -1559,6 +1567,7 @@ li:has(.plan-list__plan-item.best) {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 .viewer__catalog-cards::after {
