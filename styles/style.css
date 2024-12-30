@@ -11,12 +11,16 @@
   line-height: 1.5rem;
   color: var(--text-color);
   margin: 0 auto;
-  width: 1440px;
+  width: 90rem;
   overflow: auto;
-  scrollbar-gutter: stable;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.test {
+  display: flex;
+  user-select: none;
 }
 
 body {
@@ -43,11 +47,11 @@ h3 {
 .hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  height: 0.1rem;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
+  width: 0.1rem;
 }
 
 .icon {
@@ -183,6 +187,7 @@ h3 {
   justify-content: space-between;
   position: relative;
   align-items: center;
+  cursor: pointer;
 }
 
 .details__summary::after {
@@ -216,6 +221,14 @@ h3 {
 
 .details__summary:focus::after {
   border-color: var(--color-focus);
+}
+
+.details__summary:focus {
+  box-shadow: none;
+}
+
+.details:has(.details__summary:focus) {
+  box-shadow: var(--focus-shadow);
 }
 
 .details[open] {
@@ -458,7 +471,7 @@ h3 {
   transform: translate(-50%, -50%);
   transition: opacity 0.2s ease;
   pointer-events: none;
-  border-radius: 100px;
+  border-radius: 6.25rem;
 }
 
 .toggle__box::after {
@@ -1227,7 +1240,6 @@ li:has(.plan-list__plan-item.best) {
 }
 
 .faq {
-  align-items: center;
   gap: 2.5rem;
   justify-content: space-between;
   position: relative;
@@ -1248,9 +1260,14 @@ li:has(.plan-list__plan-item.best) {
   z-index: -1;
 }
 
-.faq-information__cta-button {
+.faq__faq-information {
+  margin-top: 12.25rem;
+}
+
+.faq-information__cta-button.button__secondary {
   margin-top: 1rem;
   text-transform: capitalize;
+  padding-left: 1.875rem;
 }
 
 .faq-questions__title {
@@ -1458,7 +1475,7 @@ li:has(.plan-list__plan-item.best) {
   top: auto;
   right: auto;
   bottom: calc(25% - 0.5rem);
-  left: 2.25rem;
+  left: calc(1.25rem + 1rem - 0.125rem);
 }
 
 .introduction {
@@ -1594,7 +1611,7 @@ li:has(.plan-list__plan-item.best) {
 }
 
 .catalog-cards__link:has(.label__sold-out) {
-  pointer-events: fill;
+  pointer-events: none;
 }
 
 .catalog-cards__link:has(.label__sold-out) .catalog-cards__catolog-card {
@@ -1650,6 +1667,13 @@ li:has(.plan-list__plan-item.best) {
 
 .catolog-card__like {
   color: #2735448c;
+  fill: transparent;
+  transition: var(--color-transition), fill 0.3s ease-out;
+}
+
+.catolog-card__like.liked {
+  fill: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .blog-introduction {
@@ -1741,6 +1765,11 @@ li:has(.plan-list__plan-item.best) {
   width: 100%;
   border-color: #2a354133;
   margin: 0;
+}
+
+.latest-articles__last-article:last-of-type {
+  padding-top: 1.5rem;
+  border-top: 0.1rem solid #22222226;
 }
 
 .blog-categories__blog-category {
@@ -2045,6 +2074,7 @@ li:has(.plan-list__plan-item.best) {
   height: 1rem;
   background-color: var(--primary-color);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .irs--flat .irs-min,
@@ -2099,6 +2129,6 @@ li:has(.plan-list__plan-item.best) {
 
 @media (max-width: 1440px) {
   :root {
-    --screen-width: 1440px;
+    --screen-width: 90rem;
   }
 }
