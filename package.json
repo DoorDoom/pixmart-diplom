@@ -1,0 +1,31 @@
+{
+  "name": "pixmart-diplom",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Diploma project for BRO Academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint styles/*.css",
+    "postcss:check": "postcss styles/*.css --dir public --no-map | postcss styles/style.css --use autoprefixer --dir public --no-map"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 1%",
+    "Firefox ESR"
+  ],
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-loader": "^8.1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stylelint": "^16.12.0"
+  }
+}
