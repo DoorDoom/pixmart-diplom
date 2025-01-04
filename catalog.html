@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.25, user-scalable=no"
+    />
     <meta
       name="description"
-      content="The page represents catalog of Pixmart. There are UI kits design assets every format and category"
+      content="The page represents a catalog of Pixmart. There are UI kit design assets every format and category"
     />
     <title>Pixmart: Catalog</title>
     <link rel="icon" href="./images/icons/favicon.svg" />
@@ -19,27 +22,32 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/constants.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+
+    <link rel="stylesheet" href="./public/normalize.css" />
+    <link rel="stylesheet" href="./public/constants.css" />
+    <link rel="stylesheet" href="./public/style.css" />
   </head>
   <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <h1 class="header__title">
+        <strong class="header__title">
           <img
             src="./images/icons/logo.svg"
             alt="Pixmart logo"
             width="108"
             height="24"
           />
-        </h1>
+        </strong>
       </a>
       <nav class="header__navigation">
         <ul class="navigation__list list">
           <li class="navigation__list-item">
             <a
-              href="https://null-smth.com/"
+              href="#"
               class="navigation__link button button__small button__navigation"
             >
               About
@@ -55,7 +63,7 @@
           </li>
           <li class="navigation__list-item">
             <a
-              href="https://null-smth.com/"
+              href="#"
               class="navigation__link button button__small button__navigation"
             >
               Creators
@@ -93,7 +101,7 @@
           <button type="submit" class="searching__button hidden">Search</button>
         </form>
         <a
-          href="https://null-smth.com/"
+          href="#"
           class="assets-block__button button button__primary button__square-medium"
         >
           <svg class="assets-block__icon icon">
@@ -370,7 +378,14 @@
             </div>
             <div class="filter-form__container">
               <h2 class="filter-form__title heading__form">Price</h2>
-              <div class="slider"></div>
+              <div class="slider">
+                <input
+                  type="text"
+                  class="js-range-slider"
+                  name="my_range"
+                  value=""
+                />
+              </div>
             </div>
             <button
               type="reset"
@@ -385,6 +400,7 @@
         </aside>
         <section class="catalog list list__column">
           <header class="catalog__viewer-header">
+            <h2 class="hidden">Assets</h2>
             <form action="#" method="get" class="viewer-header__options list">
               <label for="sorting-select" class="hidden">Sorting</label>
               <select
@@ -447,11 +463,7 @@
           <div class="catalog__viewer">
             <ul class="viewer__catalog-cards list">
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -485,11 +497,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -497,6 +510,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -510,11 +524,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -546,11 +556,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
-                  method="post"
+                  action="#"
+                  method="get"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -558,6 +569,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -571,11 +583,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -607,11 +615,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -619,6 +628,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -632,11 +642,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -666,11 +672,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -678,6 +685,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -691,11 +699,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -729,11 +733,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -741,6 +746,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -754,11 +760,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -790,11 +792,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -802,6 +805,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -815,11 +819,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -851,11 +851,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -863,6 +864,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -876,11 +878,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -912,11 +910,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -924,6 +923,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -937,11 +937,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -973,11 +969,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -985,6 +982,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -998,11 +996,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -1032,11 +1026,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1044,6 +1039,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1057,11 +1053,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -1093,11 +1085,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1105,6 +1098,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1118,11 +1112,7 @@
                 </form>
               </li>
               <li class="catalog-cards__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  class="catalog-cards__link"
-                  target="_blank"
-                >
+                <a href="#" class="catalog-cards__link" target="_blank">
                   <article
                     class="catalog-cards__catolog-card container__card behavior__card"
                   >
@@ -1154,11 +1144,12 @@
                   </article>
                 </a>
                 <form
-                  action="https://null-smth-post.com/"
+                  action="#"
                   method="post"
                   class="catolog-card__buttons list"
                 >
                   <button
+                    type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1166,6 +1157,7 @@
                     </svg>
                   </button>
                   <button
+                    type="button"
                     class="catolog-card__to-cart button button__primary button__square-medium"
                   >
                     <svg class="cta-buttons__icon icon">
@@ -1228,14 +1220,10 @@
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  About Us
-                </a>
+                <a href="#" class="list-item__link link"> About Us </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  About Us
-                </a>
+                <a href="#" class="list-item__link link"> About Us </a>
               </li>
               <li class="summary-lists__list-item">
                 <a href="./blog-details.html" class="list-item__link link">
@@ -1287,46 +1275,28 @@
           <nav class="summary-lists__navigation">
             <ul class="summary-lists__list list list__column">
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Your Cart
-                </a>
+                <a href="#" class="list-item__link link"> Your Cart </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Check Out
-                </a>
+                <a href="#" class="list-item__link link"> Check Out </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Refund Policy
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Company Policy
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Send A Message
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Customer Support
-                </a>
+                <a href="#" class="list-item__link link"> Customer Support </a>
               </li>
             </ul>
           </nav>
@@ -1335,7 +1305,7 @@
       <div class="footer__cta list">
         <div class="cta__cta-buttons list">
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -1344,7 +1314,7 @@
             </svg>
           </a>
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -1353,7 +1323,7 @@
             </svg>
           </a>
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -1385,7 +1355,7 @@
           <ul class="document-list__list list">
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Privacy Policy</a
@@ -1393,7 +1363,7 @@
             </li>
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Terms and Condition</a
@@ -1401,7 +1371,7 @@
             </li>
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Site Map</a
@@ -1414,6 +1384,9 @@
         </p>
       </div>
     </footer>
+    <script src="./js/jquery-v3.js"></script>
+    <script src="./js/ion-range-slider.js"></script>
+    <script src="./js/range-slider.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.nice-select.js"></script>
     <script src="./js/catalog-script.js"></script>
