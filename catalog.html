@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.25, user-scalable=no"
+    />
     <meta
       name="description"
-      content="The homepage of Pixmart, that represents main features of the platform"
+      content="The page represents a catalog of Pixmart. There are UI kit design assets every format and category"
     />
-    <title>Pixmart</title>
+    <title>Pixmart: Catalog</title>
     <link rel="icon" href="./images/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,27 +22,32 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/constants.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+
+    <link rel="stylesheet" href="./public/normalize.css" />
+    <link rel="stylesheet" href="./public/constants.css" />
+    <link rel="stylesheet" href="./public/style.css" />
   </head>
   <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <h1 class="header__title">
+        <strong class="header__title">
           <img
             src="./images/icons/logo.svg"
             alt="Pixmart logo"
             width="108"
             height="24"
           />
-        </h1>
+        </strong>
       </a>
       <nav class="header__navigation">
         <ul class="navigation__list list">
           <li class="navigation__list-item">
             <a
-              href="https://null-smth.com/"
+              href="#"
               class="navigation__link button button__small button__navigation"
             >
               About
@@ -55,7 +63,7 @@
           </li>
           <li class="navigation__list-item">
             <a
-              href="https://null-smth.com/"
+              href="#"
               class="navigation__link button button__small button__navigation"
             >
               Creators
@@ -93,7 +101,7 @@
           <button type="submit" class="searching__button hidden">Search</button>
         </form>
         <a
-          href="https://null-smth.com/"
+          href="#"
           class="assets-block__button button button__primary button__square-medium"
         >
           <svg class="assets-block__icon icon">
@@ -102,7 +110,1077 @@
         </a>
       </div>
     </header>
-    <main class="container__main"></main>
+    <main class="container__main">
+      <div class="introduction container__section">
+        <h1 class="introduction__semantic-title hidden">Catalog</h1>
+        <strong
+          class="introduction__title heading__main-title main-information__highlite-text"
+        >
+          Explore Top
+          <span class="highlite-text__span">UI Kits</span>&nbsp;Design Assets
+        </strong>
+      </div>
+      <div class="container__catalog container__section list">
+        <aside class="sidebar">
+          <form action="#" method="get" class="filter-form">
+            <div class="filter-form__container">
+              <h2 class="filter-form__title heading__form">Categories</h2>
+              <ul class="filter-form__list list list__column">
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    checked
+                    value="categories-all"
+                    id="categories-all"
+                  />
+                  <label class="checkbox-label" for="categories-all">
+                    All categories
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="technology"
+                    id="categories-technology"
+                  />
+                  <label class="checkbox-label" for="categories-technology">
+                    Technology
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="travel-tourism"
+                    id="categories-travel-tourism"
+                  />
+                  <label class="checkbox-label" for="categories-travel-tourism">
+                    Travel & tourism
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="health-fitness"
+                    id="categories-health-fitness"
+                  />
+                  <label class="checkbox-label" for="categories-health-fitness">
+                    Health & fitness
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="commerce"
+                    id="categories-commerce"
+                  />
+                  <label class="checkbox-label" for="categories-commerce">
+                    E-Commerce
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="education"
+                    id="categories-education"
+                  />
+                  <label class="checkbox-label" for="categories-education">
+                    Education
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="entertainment"
+                    id="categories-entertainment"
+                  />
+                  <label class="checkbox-label" for="categories-entertainment">
+                    Entertainment
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="others"
+                    id="categories-others"
+                  />
+                  <label class="checkbox-label" for="categories-others">
+                    Others
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="checkbox"
+                    class="checkbox hidden"
+                    name="categories"
+                    value="others"
+                    id="categories-others1"
+                  />
+                  <label class="checkbox-label" for="categories-others1">
+                    Others
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-form__container">
+              <h2 class="filter-form__title heading__form">Format Type</h2>
+              <ul class="filter-form__list list list__column">
+                <li class="filter-form__list-item">
+                  <input
+                    type="radio"
+                    class="radio hidden"
+                    checked
+                    name="format"
+                    value="format-figma"
+                    id="format-figma"
+                  />
+                  <label class="radio-label" for="format-figma"> Figma </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="radio"
+                    class="radio hidden"
+                    name="format"
+                    value="sketch"
+                    id="format-sketch"
+                  />
+                  <label class="radio-label" for="format-sketch">
+                    Sketch
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="radio"
+                    class="radio hidden"
+                    name="format"
+                    value="adobe-xd"
+                    id="format-adobe-xd"
+                  />
+                  <label class="radio-label" for="format-adobe-xd">
+                    Adobe XD
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="radio"
+                    class="radio hidden"
+                    name="format"
+                    value="adobe-photoshop"
+                    id="format-adobe-photoshop"
+                  />
+                  <label class="radio-label" for="format-adobe-photoshop">
+                    Adobe photoshop
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <input
+                    type="radio"
+                    class="radio hidden"
+                    name="format"
+                    value="adobe-illustration"
+                    id="format-adobe-illustration"
+                  />
+                  <label class="radio-label" for="format-adobe-illustration">
+                    Adobe illustration
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-form__container">
+              <h2 class="filter-form__title heading__form">Style</h2>
+              <ul class="filter-form__list list list__column">
+                <li class="filter-form__list-item">
+                  <label class="toggle__label" for="style-minimalist">
+                    <input
+                      type="checkbox"
+                      class="hidden toggle__checkbox"
+                      name="style"
+                      value="style-minimalist"
+                      id="style-minimalist"
+                      checked
+                    />
+                    <span class="toggle__box"></span>
+                    Minimalist
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <label class="toggle__label" for="style-modern">
+                    <input
+                      type="checkbox"
+                      class="hidden toggle__checkbox"
+                      name="style"
+                      value="style-modern"
+                      id="style-modern"
+                      checked
+                    />
+                    <span class="toggle__box"></span>
+                    Modern
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <label class="toggle__label" for="style-playful">
+                    <input
+                      type="checkbox"
+                      class="hidden toggle__checkbox"
+                      name="style"
+                      value="style-playful"
+                      id="style-playful"
+                      checked
+                    />
+                    <span class="toggle__box"></span>
+                    Playful
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <label class="toggle__label" for="style-dark-mode">
+                    <input
+                      type="checkbox"
+                      class="hidden toggle__checkbox"
+                      name="style"
+                      value="style-dark-mode"
+                      id="style-dark-mode"
+                      checked
+                    />
+                    <span class="toggle__box"></span>
+                    Dark mode
+                  </label>
+                </li>
+                <li class="filter-form__list-item">
+                  <label class="toggle__label" for="style-photocentric">
+                    <input
+                      type="checkbox"
+                      class="hidden toggle__checkbox"
+                      name="style"
+                      value="style-photocentric"
+                      id="style-photocentric"
+                      checked
+                    />
+                    <span class="toggle__box"></span>
+                    Photocentric
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-form__container">
+              <h2 class="filter-form__title heading__form">Price</h2>
+              <div class="slider">
+                <input
+                  type="text"
+                  class="js-range-slider"
+                  name="my_range"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              type="reset"
+              class="filter-form__reset button button__secondary button__small"
+            >
+              <svg class="filter-form__icon icon">
+                <use xlink:href="./images/icons/sprite.svg#close"></use>
+              </svg>
+              Clear all filters
+            </button>
+          </form>
+        </aside>
+        <section class="catalog list list__column">
+          <header class="catalog__viewer-header">
+            <h2 class="hidden">Assets</h2>
+            <form action="#" method="get" class="viewer-header__options list">
+              <label for="sorting-select" class="hidden">Sorting</label>
+              <select
+                class="options__select select button button__secondary button__normal"
+                name="sorting"
+                id="sorting-select"
+              >
+                <option class="option" value="">Best Seller</option>
+                <option class="option" value="newest">Newest</option>
+                <option class="option" value="popular">Popular</option>
+              </select>
+              <div class="options__viewer-type list">
+                <span class="viewer-type__text">
+                  Showing 12 out of 120 results.
+                </span>
+                <button
+                  class="viewer-type__button button button__primary button__square-medium"
+                >
+                  <svg class="chip-list__chip-image icon">
+                    <use xlink:href="./images/icons/sprite.svg#table" />
+                  </svg>
+                </button>
+                <button
+                  class="viewer-type__button button button__secondary button__square-medium"
+                >
+                  <svg class="chip-list__chip-image icon">
+                    <use xlink:href="./images/icons/sprite.svg#list" />
+                  </svg>
+                </button>
+              </div>
+              <div class="viewer-header__tags container__card">
+                <ul class="tags__chip-list list">
+                  <li class="chip-list__chip-item">
+                    <button
+                      type="submit"
+                      class="chip-list__chip-link button button__secondary button__small"
+                    >
+                      UI kit
+                      <svg class="chip-list__chip-image icon__small">
+                        <use xlink:href="./images/icons/sprite.svg#close" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="chip-list__chip-item">
+                    <button
+                      type="submit"
+                      class="chip-list__chip-link button button__secondary button__small"
+                    >
+                      UI kit
+                      <svg class="chip-list__chip-image icon__small">
+                        <use xlink:href="./images/icons/sprite.svg#close" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <button type="submit" class="hidden">Apply</button>
+            </form>
+          </header>
+          <div class="catalog__viewer">
+            <ul class="viewer__catalog-cards list">
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/lens-chronicles.webp"
+                        alt="lens chronicles asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__sold-out heading__section"
+                      >
+                        Sold out
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Lens Chronicles
+                      </h3>
+                      <p class="catolog-card__description">
+                        Photography · Creative
+                      </p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€00.00</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/career-success.webp"
+                        alt="career success asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__new heading__section"
+                      >
+                        New
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Career Success
+                      </h3>
+                      <p class="catolog-card__description">Guidance · Jobs</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€20.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="get"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/dream-homes.webp"
+                        alt="career success asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span class="catolog-card__label label heading__section">
+                        Popular
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Dream Homes
+                      </h3>
+                      <p class="catolog-card__description">
+                        Real Estate · Modern
+                      </p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€45.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/foodish-catering.webp"
+                        alt="foodish catering asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span class="catolog-card__label label heading__section">
+                        Popular
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Foodish Catering
+                      </h3>
+                      <p class="catolog-card__description">Food · Events</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€15.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/caring-hearts.webp"
+                        alt="caring hearts asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__new heading__section"
+                      >
+                        New
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Caring Hearts
+                      </h3>
+                      <p class="catolog-card__description">
+                        Healthcare · Support
+                      </p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€19.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/gaming-rise.webp"
+                        alt="gaming rise asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__sold-out heading__section"
+                      >
+                        Sold out
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Gaming Rise
+                      </h3>
+                      <p class="catolog-card__description">eSports · Trends</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€00.00</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/edit-pro.webp"
+                        alt="edit pro asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__sold-out heading__section"
+                      >
+                        Sold out
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Edit Pro
+                      </h3>
+                      <p class="catolog-card__description">Design · Tools</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€00.00</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/banking-redefined.webp"
+                        alt="banking redefined asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__new heading__section"
+                      >
+                        New
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Banking Redefined
+                      </h3>
+                      <p class="catolog-card__description">Finance · Secure</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€25.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/exploring-fun.webp"
+                        alt="exploring fun asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span class="catolog-card__label label heading__section">
+                        Popular
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Exploring Fun
+                      </h3>
+                      <p class="catolog-card__description">
+                        Travel · Adventure
+                      </p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€41.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/admin-dashboard.webp"
+                        alt="admin dashboard asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span class="catolog-card__label label heading__section">
+                        Popular
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Admin Dashboard
+                      </h3>
+                      <p class="catolog-card__description">Data · Tools</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€15.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/analytical-dashboard.webp"
+                        alt="analytical dashboard asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__new heading__section"
+                      >
+                        New
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Analytical Dashboard
+                      </h3>
+                      <p class="catolog-card__description">Data · Tools</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€10.99</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+              <li class="catalog-cards__list-item">
+                <a href="#" class="catalog-cards__link" target="_blank">
+                  <article
+                    class="catalog-cards__catolog-card container__card behavior__card"
+                  >
+                    <div class="catolog-card__image-container">
+                      <img
+                        src="./images/popular-products/kindergarten.webp"
+                        alt="kindergarten asset"
+                        class="catolog-card__image"
+                        width="325"
+                        height="260"
+                      />
+                      <span
+                        class="catolog-card__label label label__sold-out heading__section"
+                      >
+                        Sold out
+                      </span>
+                    </div>
+                    <div class="catolog-card__information">
+                      <h3 class="catolog-card__title heading__card-title">
+                        Kindergarten
+                      </h3>
+                      <p class="catolog-card__description">Education · Kids</p>
+                    </div>
+                    <div class="catolog-card__cart-manager list">
+                      <strong class="catolog-card__price heading__card-title"
+                        >€00.00</strong
+                      >
+                    </div>
+                  </article>
+                </a>
+                <form
+                  action="#"
+                  method="post"
+                  class="catolog-card__buttons list"
+                >
+                  <button
+                    type="button"
+                    class="catolog-card__like button button__secondary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#like"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="catolog-card__to-cart button button__primary button__square-medium"
+                  >
+                    <svg class="cta-buttons__icon icon">
+                      <use xlink:href="./images/icons/sprite.svg#bag"></use>
+                    </svg>
+                  </button>
+                  <button
+                    type="submit"
+                    class="catolog-card__submit hidden"
+                  ></button>
+                </form>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="viewer__more button button__secondary button__large"
+            >
+              Load more
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
     <footer class="footer list list__column">
       <div class="footer__summary list">
         <div class="summary__information list list__column">
@@ -142,14 +1220,10 @@
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  About Us
-                </a>
+                <a href="#" class="list-item__link link"> About Us </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  About Us
-                </a>
+                <a href="#" class="list-item__link link"> About Us </a>
               </li>
               <li class="summary-lists__list-item">
                 <a href="./blog-details.html" class="list-item__link link">
@@ -201,46 +1275,28 @@
           <nav class="summary-lists__navigation">
             <ul class="summary-lists__list list list__column">
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Your Cart
-                </a>
+                <a href="#" class="list-item__link link"> Your Cart </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Check Out
-                </a>
+                <a href="#" class="list-item__link link"> Check Out </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Refund Policy
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Company Policy
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a
-                  href="https://null-smth.com/"
-                  target="_blank"
-                  class="list-item__link link"
-                >
+                <a href="#" target="_blank" class="list-item__link link">
                   Send A Message
                 </a>
               </li>
               <li class="summary-lists__list-item">
-                <a href="https://null-smth.com/" class="list-item__link link">
-                  Customer Support
-                </a>
+                <a href="#" class="list-item__link link"> Customer Support </a>
               </li>
             </ul>
           </nav>
@@ -249,7 +1305,7 @@
       <div class="footer__cta list">
         <div class="cta__cta-buttons list">
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -258,7 +1314,7 @@
             </svg>
           </a>
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -267,7 +1323,7 @@
             </svg>
           </a>
           <a
-            href="https://null-smth.com/"
+            href="#"
             target="_blank"
             class="cta-buttons__button button button__secondary button__square-big"
           >
@@ -277,7 +1333,7 @@
           </a>
         </div>
         <div class="cta__newsletter list">
-          <label for="email" class="newsletter__label heading__article-title">
+          <label for="email" class="newsletter__label heading__form">
             Subscribe to Design Newsletter
           </label>
           <input
@@ -299,7 +1355,7 @@
           <ul class="document-list__list list">
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Privacy Policy</a
@@ -307,7 +1363,7 @@
             </li>
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Terms and Condition</a
@@ -315,7 +1371,7 @@
             </li>
             <li class="document-list__list-item">
               <a
-                href="https://null-smth.com/"
+                href="#"
                 target="_blank"
                 class="list-item__link list-item__document-link link"
                 >Site Map</a
@@ -328,5 +1384,11 @@
         </p>
       </div>
     </footer>
+    <script src="./js/jquery-v3.js"></script>
+    <script src="./js/ion-range-slider.js"></script>
+    <script src="./js/range-slider.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.nice-select.js"></script>
+    <script src="./js/catalog-script.js"></script>
   </body>
 </html>
