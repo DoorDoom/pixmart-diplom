@@ -34,17 +34,16 @@
   <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <strong class="header__title">
-          <img
-            src="./images/icons/logo.svg"
-            alt="Pixmart logo"
-            width="108"
-            height="24"
-          />
-        </strong>
+        <img
+          src="./images/icons/logo.svg"
+          alt="Pixmart logo"
+          width="108"
+          height="24"
+        />
+        <span class="hidden">Pixmart logo</span>
       </a>
       <nav class="header__navigation">
-        <ul class="navigation__list list">
+        <ul class="navigation__list list__elements list">
           <li class="navigation__list-item">
             <a
               href="#"
@@ -97,6 +96,7 @@
             class="searching__input input input__small"
             id="asset-searching"
             placeholder="Search for Digital Assets"
+            required
           />
           <button type="submit" class="searching__button hidden">Search</button>
         </form>
@@ -107,277 +107,246 @@
           <svg class="assets-block__icon icon">
             <use xlink:href="./images/icons/sprite.svg#bag"></use>
           </svg>
+          <span class="hidden">To catalog</span>
         </a>
       </div>
     </header>
     <main class="container__main">
-      <div class="introduction container__section">
+      <div class="introduction">
         <h1 class="introduction__semantic-title hidden">Catalog</h1>
-        <strong
-          class="introduction__title heading__main-title main-information__highlite-text"
-        >
-          Explore Top
-          <span class="highlite-text__span">UI Kits</span>&nbsp;Design Assets
-        </strong>
+        <p class="introduction__title container__section">
+          <strong class="heading__main-title main-information__highlite-text">
+            Explore Top
+            <span class="highlite-text__span">UI Kits</span>&nbsp;Design Assets
+          </strong>
+        </p>
       </div>
       <div class="container__catalog container__section list">
-        <aside class="sidebar">
+        <div class="sidebar">
           <form action="#" method="get" class="filter-form">
-            <div class="filter-form__container">
-              <h2 class="filter-form__title heading__form">Categories</h2>
-              <ul class="filter-form__list list list__column">
-                <li class="filter-form__list-item">
+            <fieldset class="filter-form__container">
+              <legend>
+                <h2 class="filter-form__title heading__form">Categories</h2>
+              </legend>
+              <div class="filter-form__list list list__column">
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  checked
+                  value="categories-all"
+                  id="categories-all"
+                />
+                <label class="checkbox-label" for="categories-all">
+                  All categories
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="technology"
+                  id="categories-technology"
+                />
+                <label class="checkbox-label" for="categories-technology">
+                  Technology
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="travel-tourism"
+                  id="categories-travel-tourism"
+                />
+                <label class="checkbox-label" for="categories-travel-tourism">
+                  Travel & tourism
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="health-fitness"
+                  id="categories-health-fitness"
+                />
+                <label class="checkbox-label" for="categories-health-fitness">
+                  Health & fitness
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="commerce"
+                  id="categories-commerce"
+                />
+                <label class="checkbox-label" for="categories-commerce">
+                  E-Commerce
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="education"
+                  id="categories-education"
+                />
+                <label class="checkbox-label" for="categories-education">
+                  Education
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="entertainment"
+                  id="categories-entertainment"
+                />
+                <label class="checkbox-label" for="categories-entertainment">
+                  Entertainment
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="others"
+                  id="categories-others"
+                />
+                <label class="checkbox-label" for="categories-others">
+                  Others
+                </label>
+                <input
+                  type="checkbox"
+                  class="checkbox hidden"
+                  name="categories"
+                  value="others"
+                  id="categories-others1"
+                />
+                <label class="checkbox-label" for="categories-others1">
+                  Others
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-form__container">
+              <legend>
+                <h2 class="filter-form__title heading__form">Format Type</h2>
+              </legend>
+              <div class="filter-form__list list list__column">
+                <input
+                  type="radio"
+                  class="radio hidden"
+                  checked
+                  name="format"
+                  value="format-figma"
+                  id="format-figma"
+                />
+                <label class="radio-label" for="format-figma"> Figma </label>
+                <input
+                  type="radio"
+                  class="radio hidden"
+                  name="format"
+                  value="sketch"
+                  id="format-sketch"
+                />
+                <label class="radio-label" for="format-sketch"> Sketch </label>
+                <input
+                  type="radio"
+                  class="radio hidden"
+                  name="format"
+                  value="adobe-xd"
+                  id="format-adobe-xd"
+                />
+                <label class="radio-label" for="format-adobe-xd">
+                  Adobe XD
+                </label>
+                <input
+                  type="radio"
+                  class="radio hidden"
+                  name="format"
+                  value="adobe-photoshop"
+                  id="format-adobe-photoshop"
+                />
+                <label class="radio-label" for="format-adobe-photoshop">
+                  Adobe photoshop
+                </label>
+                <input
+                  type="radio"
+                  class="radio hidden"
+                  name="format"
+                  value="adobe-illustration"
+                  id="format-adobe-illustration"
+                />
+                <label class="radio-label" for="format-adobe-illustration">
+                  Adobe illustration
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-form__container">
+              <legend>
+                <h2 class="filter-form__title heading__form">Style</h2>
+              </legend>
+              <div class="filter-form__list list list__column">
+                <label class="toggle__label" for="style-minimalist">
                   <input
                     type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
+                    class="hidden toggle__checkbox"
+                    name="style"
+                    value="style-minimalist"
+                    id="style-minimalist"
                     checked
-                    value="categories-all"
-                    id="categories-all"
                   />
-                  <label class="checkbox-label" for="categories-all">
-                    All categories
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
+                  <span class="toggle__box"></span>
+                  Minimalist
+                </label>
+                <label class="toggle__label" for="style-modern">
                   <input
                     type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="technology"
-                    id="categories-technology"
-                  />
-                  <label class="checkbox-label" for="categories-technology">
-                    Technology
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="travel-tourism"
-                    id="categories-travel-tourism"
-                  />
-                  <label class="checkbox-label" for="categories-travel-tourism">
-                    Travel & tourism
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="health-fitness"
-                    id="categories-health-fitness"
-                  />
-                  <label class="checkbox-label" for="categories-health-fitness">
-                    Health & fitness
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="commerce"
-                    id="categories-commerce"
-                  />
-                  <label class="checkbox-label" for="categories-commerce">
-                    E-Commerce
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="education"
-                    id="categories-education"
-                  />
-                  <label class="checkbox-label" for="categories-education">
-                    Education
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="entertainment"
-                    id="categories-entertainment"
-                  />
-                  <label class="checkbox-label" for="categories-entertainment">
-                    Entertainment
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="others"
-                    id="categories-others"
-                  />
-                  <label class="checkbox-label" for="categories-others">
-                    Others
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="checkbox"
-                    class="checkbox hidden"
-                    name="categories"
-                    value="others"
-                    id="categories-others1"
-                  />
-                  <label class="checkbox-label" for="categories-others1">
-                    Others
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter-form__container">
-              <h2 class="filter-form__title heading__form">Format Type</h2>
-              <ul class="filter-form__list list list__column">
-                <li class="filter-form__list-item">
-                  <input
-                    type="radio"
-                    class="radio hidden"
+                    class="hidden toggle__checkbox"
+                    name="style"
+                    value="style-modern"
+                    id="style-modern"
                     checked
-                    name="format"
-                    value="format-figma"
-                    id="format-figma"
                   />
-                  <label class="radio-label" for="format-figma"> Figma </label>
-                </li>
-                <li class="filter-form__list-item">
+                  <span class="toggle__box"></span>
+                  Modern
+                </label>
+                <label class="toggle__label" for="style-playful">
                   <input
-                    type="radio"
-                    class="radio hidden"
-                    name="format"
-                    value="sketch"
-                    id="format-sketch"
+                    type="checkbox"
+                    class="hidden toggle__checkbox"
+                    name="style"
+                    value="style-playful"
+                    id="style-playful"
+                    checked
                   />
-                  <label class="radio-label" for="format-sketch">
-                    Sketch
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
+                  <span class="toggle__box"></span>
+                  Playful
+                </label>
+                <label class="toggle__label" for="style-dark-mode">
                   <input
-                    type="radio"
-                    class="radio hidden"
-                    name="format"
-                    value="adobe-xd"
-                    id="format-adobe-xd"
+                    type="checkbox"
+                    class="hidden toggle__checkbox"
+                    name="style"
+                    value="style-dark-mode"
+                    id="style-dark-mode"
+                    checked
                   />
-                  <label class="radio-label" for="format-adobe-xd">
-                    Adobe XD
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
+                  <span class="toggle__box"></span>
+                  Dark mode
+                </label>
+                <label class="toggle__label" for="style-photocentric">
                   <input
-                    type="radio"
-                    class="radio hidden"
-                    name="format"
-                    value="adobe-photoshop"
-                    id="format-adobe-photoshop"
+                    type="checkbox"
+                    class="hidden toggle__checkbox"
+                    name="style"
+                    value="style-photocentric"
+                    id="style-photocentric"
+                    checked
                   />
-                  <label class="radio-label" for="format-adobe-photoshop">
-                    Adobe photoshop
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <input
-                    type="radio"
-                    class="radio hidden"
-                    name="format"
-                    value="adobe-illustration"
-                    id="format-adobe-illustration"
-                  />
-                  <label class="radio-label" for="format-adobe-illustration">
-                    Adobe illustration
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter-form__container">
-              <h2 class="filter-form__title heading__form">Style</h2>
-              <ul class="filter-form__list list list__column">
-                <li class="filter-form__list-item">
-                  <label class="toggle__label" for="style-minimalist">
-                    <input
-                      type="checkbox"
-                      class="hidden toggle__checkbox"
-                      name="style"
-                      value="style-minimalist"
-                      id="style-minimalist"
-                      checked
-                    />
-                    <span class="toggle__box"></span>
-                    Minimalist
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <label class="toggle__label" for="style-modern">
-                    <input
-                      type="checkbox"
-                      class="hidden toggle__checkbox"
-                      name="style"
-                      value="style-modern"
-                      id="style-modern"
-                      checked
-                    />
-                    <span class="toggle__box"></span>
-                    Modern
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <label class="toggle__label" for="style-playful">
-                    <input
-                      type="checkbox"
-                      class="hidden toggle__checkbox"
-                      name="style"
-                      value="style-playful"
-                      id="style-playful"
-                      checked
-                    />
-                    <span class="toggle__box"></span>
-                    Playful
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <label class="toggle__label" for="style-dark-mode">
-                    <input
-                      type="checkbox"
-                      class="hidden toggle__checkbox"
-                      name="style"
-                      value="style-dark-mode"
-                      id="style-dark-mode"
-                      checked
-                    />
-                    <span class="toggle__box"></span>
-                    Dark mode
-                  </label>
-                </li>
-                <li class="filter-form__list-item">
-                  <label class="toggle__label" for="style-photocentric">
-                    <input
-                      type="checkbox"
-                      class="hidden toggle__checkbox"
-                      name="style"
-                      value="style-photocentric"
-                      id="style-photocentric"
-                      checked
-                    />
-                    <span class="toggle__box"></span>
-                    Photocentric
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter-form__container">
-              <h2 class="filter-form__title heading__form">Price</h2>
+                  <span class="toggle__box"></span>
+                  Photocentric
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-form__container">
+              <legend>
+                <h2 class="filter-form__title heading__form">Price</h2>
+              </legend>
               <div class="slider">
                 <input
                   type="text"
@@ -386,7 +355,7 @@
                   value=""
                 />
               </div>
-            </div>
+            </fieldset>
             <button
               type="reset"
               class="filter-form__reset button button__secondary button__small"
@@ -397,7 +366,7 @@
               Clear all filters
             </button>
           </form>
-        </aside>
+        </div>
         <section class="catalog list list__column">
           <header class="catalog__viewer-header">
             <h2 class="hidden">Assets</h2>
@@ -417,22 +386,26 @@
                   Showing 12 out of 120 results.
                 </span>
                 <button
+                  type="button"
                   class="viewer-type__button button button__primary button__square-medium"
                 >
                   <svg class="chip-list__chip-image icon">
                     <use xlink:href="./images/icons/sprite.svg#table" />
                   </svg>
+                  <span class="hidden">Table view</span>
                 </button>
                 <button
+                  type="button"
                   class="viewer-type__button button button__secondary button__square-medium"
                 >
                   <svg class="chip-list__chip-image icon">
                     <use xlink:href="./images/icons/sprite.svg#list" />
                   </svg>
+                  <span class="hidden">List view</span>
                 </button>
               </div>
               <div class="viewer-header__tags container__card">
-                <ul class="tags__chip-list list">
+                <ul class="navigation__list list__elements list">
                   <li class="chip-list__chip-item">
                     <button
                       type="submit"
@@ -461,7 +434,7 @@
             </form>
           </header>
           <div class="catalog__viewer">
-            <ul class="viewer__catalog-cards list">
+            <ul class="viewer__catalog-cards list list__elements">
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
                   <article
@@ -489,18 +462,14 @@
                         Photography · Creative
                       </p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€00.00</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -508,6 +477,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -516,12 +486,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -548,18 +515,14 @@
                       </h3>
                       <p class="catolog-card__description">Guidance · Jobs</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€20.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="get"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -567,6 +530,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -575,12 +539,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -607,18 +568,14 @@
                         Real Estate · Modern
                       </p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€45.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -626,6 +583,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -634,12 +592,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -664,18 +619,14 @@
                       </h3>
                       <p class="catolog-card__description">Food · Events</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€15.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -683,6 +634,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -691,12 +643,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -725,18 +674,14 @@
                         Healthcare · Support
                       </p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€19.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -744,6 +689,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -752,12 +698,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -784,18 +727,14 @@
                       </h3>
                       <p class="catolog-card__description">eSports · Trends</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€00.00</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -803,6 +742,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -811,12 +751,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -843,18 +780,14 @@
                       </h3>
                       <p class="catolog-card__description">Design · Tools</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€00.00</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -862,6 +795,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -870,12 +804,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -902,18 +833,14 @@
                       </h3>
                       <p class="catolog-card__description">Finance · Secure</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€25.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -921,6 +848,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -929,12 +857,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -961,18 +886,14 @@
                         Travel · Adventure
                       </p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€41.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -980,6 +901,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -988,12 +910,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -1018,18 +937,14 @@
                       </h3>
                       <p class="catolog-card__description">Data · Tools</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€15.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -1037,6 +952,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -1045,12 +961,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -1077,18 +990,14 @@
                       </h3>
                       <p class="catolog-card__description">Data · Tools</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€10.99</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -1096,6 +1005,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -1104,12 +1014,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
               <li class="catalog-cards__list-item">
                 <a href="#" class="catalog-cards__link" target="_blank">
@@ -1136,18 +1043,14 @@
                       </h3>
                       <p class="catolog-card__description">Education · Kids</p>
                     </div>
-                    <div class="catolog-card__cart-manager list">
+                    <p class="catolog-card__cart-manager list">
                       <strong class="catolog-card__price heading__card-title"
                         >€00.00</strong
                       >
-                    </div>
+                    </p>
                   </article>
                 </a>
-                <form
-                  action="#"
-                  method="post"
-                  class="catolog-card__buttons list"
-                >
+                <div class="catolog-card__buttons list">
                   <button
                     type="button"
                     class="catolog-card__like button button__secondary button__square-medium"
@@ -1155,6 +1058,7 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#like"></use>
                     </svg>
+                    <span class="hidden">Put like</span>
                   </button>
                   <button
                     type="button"
@@ -1163,12 +1067,9 @@
                     <svg class="cta-buttons__icon icon">
                       <use xlink:href="./images/icons/sprite.svg#bag"></use>
                     </svg>
+                    <span class="hidden">Add to cart</span>
                   </button>
-                  <button
-                    type="submit"
-                    class="catolog-card__submit hidden"
-                  ></button>
-                </form>
+                </div>
               </li>
             </ul>
             <button
@@ -1185,15 +1086,13 @@
       <div class="footer__summary list">
         <div class="summary__information list list__column">
           <a href="./index.html" class="information__link">
-            <strong class="information__title">
-              <img
-                src="./images/icons/logo.svg"
-                alt="Pixmart logo"
-                width="300"
-                height="58"
-                class="information__logo"
-              />
-            </strong>
+            <img
+              src="./images/icons/logo.svg"
+              alt="Pixmart logo"
+              width="300"
+              height="58"
+              class="information__logo"
+            />
           </a>
           <p class="information__description">
             Your premium digital assets solution with high quality and
@@ -1202,104 +1101,98 @@
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Company</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v1
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v2
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v3
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> About Us </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> About Us </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./blog-details.html" class="list-item__link link">
-                  Blog Articles
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v1
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v2
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v3
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./blog-details.html" class="list-item__link link">
+                Blog Articles
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Products</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Website
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Mobile App
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Social Media Feeds
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Presentation
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Product Mockups
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Illustrations
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Website
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Mobile App
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Social Media Feeds
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Presentation
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Product Mockups
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Illustrations
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Account</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Your Cart </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Check Out </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Refund Policy
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Company Policy
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Send A Message
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Customer Support </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Your Cart </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Check Out </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Refund Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Company Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Send A Message
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Customer Support </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer__cta list">
@@ -1312,6 +1205,7 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#twitter"></use>
             </svg>
+            <span class="hidden">To twitter</span>
           </a>
           <a
             href="#"
@@ -1321,6 +1215,7 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#facebook"></use>
             </svg>
+            <span class="hidden">To facebook</span>
           </a>
           <a
             href="#"
@@ -1330,9 +1225,10 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#telegram"></use>
             </svg>
+            <span class="hidden">To telegram</span>
           </a>
         </div>
-        <div class="cta__newsletter list">
+        <form action="#" method="post" class="cta__newsletter list">
           <label for="email" class="newsletter__label heading__form">
             Subscribe to Design Newsletter
           </label>
@@ -1342,38 +1238,31 @@
             name="email"
             class="newsletter__input input input__large"
             placeholder="Enter your email address ..."
+            required
           />
           <button
+            type="submit"
             class="newsletter__button button button__primary button__large"
           >
             Subscribe
           </button>
-        </div>
+        </form>
       </div>
       <div class="footer__documents list">
         <div class="documents__document-list">
           <ul class="document-list__list list">
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Privacy Policy</a
               >
             </li>
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Terms and Condition</a
               >
             </li>
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Site Map</a
               >
             </li>

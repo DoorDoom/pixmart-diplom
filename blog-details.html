@@ -29,17 +29,16 @@
   <body>
     <header class="header list">
       <a href="./index.html" class="header__logo">
-        <strong class="header__title">
-          <img
-            src="./images/icons/logo.svg"
-            alt="Pixmart logo"
-            width="108"
-            height="24"
-          />
-        </strong>
+        <img
+          src="./images/icons/logo.svg"
+          alt="Pixmart logo"
+          width="108"
+          height="24"
+        />
+        <span class="hidden">Pixmart logo</span>
       </a>
       <nav class="header__navigation">
-        <ul class="navigation__list list">
+        <ul class="navigation__list list__elements list">
           <li class="navigation__list-item">
             <a
               href="#"
@@ -92,22 +91,23 @@
             class="searching__input input input__small"
             id="asset-searching"
             placeholder="Search for Digital Assets"
+            required
           />
           <button type="submit" class="searching__button hidden">Search</button>
         </form>
         <a
           href="#"
-          target="_blank"
           class="assets-block__button button button__primary button__square-medium"
         >
           <svg class="assets-block__icon icon">
             <use xlink:href="./images/icons/sprite.svg#bag"></use>
           </svg>
+          <span class="hidden">To catalog</span>
         </a>
       </div>
     </header>
     <main class="container__main">
-      <section class="blog-introduction container__section list list__column">
+      <div class="blog-introduction container__section list list__column">
         <span class="blog-introduction__tag label"> Typography</span>
         <h1
           class="blog-introduction__title heading__main-title main-information__highlite-text"
@@ -115,7 +115,7 @@
           Mastering the Art of Typography: Tips&nbsp;for Eye-Catching Designs
           for 2024
         </h1>
-      </section>
+      </div>
       <section class="blog container__section">
         <div class="blog__image-container">
           <img
@@ -126,7 +126,7 @@
             class="blog__image"
           />
         </div>
-        <aside class="blog__article-information list list__column">
+        <div class="blog__article-information list list__column">
           <div class="article-information__author">
             <img
               src="./images/author.webp"
@@ -181,7 +181,7 @@
             </h2>
             <ul class="latest-articles__list list list__column">
               <li class="latest-articles__last-article">
-                <a href="#" target="_blank" class="last-article__link">
+                <a href="#" class="last-article__link">
                   <h3 class="last-article__title heading__card-title">Text</h3>
                   <p class="last-article__publish-time">
                     <time datetime="2024-05-15"> March 15, 2024 </time>
@@ -189,7 +189,7 @@
                 </a>
               </li>
               <li class="latest-articles__last-article">
-                <a href="#" target="_blank" class="last-article__link">
+                <a href="#" class="last-article__link">
                   <h3 class="last-article__title heading__card-title">Text</h3>
                   <p class="last-article__publish-time">
                     <time datetime="2024-05-15"> March 15, 2024 </time>
@@ -198,7 +198,7 @@
               </li>
             </ul>
           </div>
-        </aside>
+        </div>
         <div class="blog__article text__section list list__column">
           <p class="article__text">
             In the vast expanse of graphic design, typography stands as a
@@ -407,15 +407,13 @@
       <div class="footer__summary list">
         <div class="summary__information list list__column">
           <a href="./index.html" class="information__link">
-            <strong class="information__title">
-              <img
-                src="./images/icons/logo.svg"
-                alt="Pixmart logo"
-                width="300"
-                height="58"
-                class="information__logo"
-              />
-            </strong>
+            <img
+              src="./images/icons/logo.svg"
+              alt="Pixmart logo"
+              width="300"
+              height="58"
+              class="information__logo"
+            />
           </a>
           <p class="information__description">
             Your premium digital assets solution with high quality and
@@ -424,104 +422,98 @@
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Company</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v1
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v2
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./index.html" class="list-item__link link">
-                  Homepage v3
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> About Us </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> About Us </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./blog-details.html" class="list-item__link link">
-                  Blog Articles
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v1
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v2
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v3
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./blog-details.html" class="list-item__link link">
+                Blog Articles
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Products</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Website
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Mobile App
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Social Media Feeds
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Presentation
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Product Mockups
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="./catalog.html" class="list-item__link link">
-                  Illustrations
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Website
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Mobile App
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Social Media Feeds
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Presentation
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Product Mockups
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Illustrations
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="summary__summary-lists">
           <h2 class="summary-lists__title heading__card-title">Account</h2>
-          <nav class="summary-lists__navigation">
-            <ul class="summary-lists__list list list__column">
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Your Cart </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Check Out </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Refund Policy
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Company Policy
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" target="_blank" class="list-item__link link">
-                  Send A Message
-                </a>
-              </li>
-              <li class="summary-lists__list-item">
-                <a href="#" class="list-item__link link"> Customer Support </a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Your Cart </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Check Out </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Refund Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Company Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Send A Message
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Customer Support </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer__cta list">
@@ -534,6 +526,7 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#twitter"></use>
             </svg>
+            <span class="hidden">To twitter</span>
           </a>
           <a
             href="#"
@@ -543,6 +536,7 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#facebook"></use>
             </svg>
+            <span class="hidden">To facebook</span>
           </a>
           <a
             href="#"
@@ -552,9 +546,10 @@
             <svg class="cta-buttons__icon icon">
               <use xlink:href="./images/icons/sprite.svg#telegram"></use>
             </svg>
+            <span class="hidden">To telegram</span>
           </a>
         </div>
-        <div class="cta__newsletter list">
+        <form action="#" method="post" class="cta__newsletter list">
           <label for="email" class="newsletter__label heading__form">
             Subscribe to Design Newsletter
           </label>
@@ -564,38 +559,31 @@
             name="email"
             class="newsletter__input input input__large"
             placeholder="Enter your email address ..."
+            required
           />
           <button
+            type="submit"
             class="newsletter__button button button__primary button__large"
           >
             Subscribe
           </button>
-        </div>
+        </form>
       </div>
       <div class="footer__documents list">
         <div class="documents__document-list">
           <ul class="document-list__list list">
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Privacy Policy</a
               >
             </li>
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Terms and Condition</a
               >
             </li>
             <li class="document-list__list-item">
-              <a
-                href="#"
-                target="_blank"
-                class="list-item__link list-item__document-link link"
+              <a href="#" class="list-item__link list-item__document-link link"
                 >Site Map</a
               >
             </li>
