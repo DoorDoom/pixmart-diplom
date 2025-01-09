@@ -1,1 +1,1 @@
-@keyframes details-end-animation{from{height:10rem;min-height:-moz-fit-content;min-height:fit-content}to{height:2rem;min-height:-moz-fit-content;min-height:fit-content}}
+@-webkit-keyframes details-start-animation{from{height:2rem}30%{max-height:fit-content;border:.125rem solid var(--primary-color)}to{height:40rem;max-height:fit-content}}@-moz-keyframes details-start-animation{from{height:2rem}30%{border:.125rem solid var(--primary-color)}to{height:9rem}}@keyframes details-end-animation{from{height:10rem;min-height:fit-content}to{height:2rem;min-height:fit-content}}
