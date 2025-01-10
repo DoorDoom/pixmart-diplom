@@ -875,17 +875,24 @@ h4 {
 .main {
   grid-template-columns: 9.5rem 1fr;
   justify-content: space-between;
-  background: linear-gradient(to right, var(--background-color) 52%, #fff 86%);
   background-image: url("../images/intros/intro-platform.webp"),
     url("../images/icons/pen.svg"), url("../images/icons/ruler.svg"),
     url("../images/intros/intro-articles.webp"),
-    url("../images/intros/intro-eventify.webp");
+    url("../images/intros/intro-eventify.webp"),
+    linear-gradient(to right, var(--background-color) 52%, #fff 86%);
   background-repeat: no-repeat;
   background-size: 17.5rem 26.375rem, 8.5rem 6.875rem, 7.875rem 8.375rem,
-    18.25rem 10.25rem, 32.125rem 18.75rem;
-  background-position: 0 0, 28.25rem 0rem, 0rem 25.625rem, 19.75rem 3rem,
-    bottom right;
+    18.25rem 10.25rem, 32.125rem 18.75rem, 100% 100%;
+  background-position: calc((100% - var(--screen-width)) / 2 + 52.25rem) 3rem,
+    calc((100% - var(--screen-width)) / 2 + 76.125rem) 3rem,
+    calc((100% - var(--screen-width)) / 2 + 47.5rem) 28.625rem,
+    calc((100% - var(--screen-width)) / 2 + 72.5rem) 6rem,
+    calc((100% - var(--screen-width)) / 2 + 66.375rem) calc(100% - 2.875rem),
+    0 0;
+  min-width: var(--screen-width);
 }
+
+/* margin-left: calc((100% - var(--screen-width)) / 2); */
 
 .main__main-information {
   gap: 2rem;
