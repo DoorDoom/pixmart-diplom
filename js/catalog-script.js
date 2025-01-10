@@ -1,0 +1,1 @@
+$(document).ready(function(){$("select").niceSelect();$(".catolog-card__like").on("click",function(){$(this).toggleClass("liked")})})

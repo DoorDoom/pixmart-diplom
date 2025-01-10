@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.25, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="The page represents contact information. There are place in the map, form for connecting with us"
+    />
+    <title>Pixmart: Contacts</title>
+    <link rel="icon" href="./images/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/normalize.css" />
+    <link rel="stylesheet" href="./public/constants.css" />
+    <link rel="stylesheet" href="./public/style.css" />
+  </head>
+  <body>
+    <header class="header list">
+      <a href="./index.html" class="header__logo">
+        <img
+          src="./images/icons/logo.svg"
+          alt="Pixmart logo"
+          width="108"
+          height="24"
+        />
+        <span class="hidden">Pixmart logo</span>
+      </a>
+      <nav class="header__navigation">
+        <ul class="navigation__list list__elements list">
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              About
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="./catalog.html"
+              class="navigation__link button button__small button__navigation"
+            >
+              Products
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="#"
+              class="navigation__link button button__small button__navigation"
+            >
+              Creators
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="./blog-details.html"
+              class="navigation__link button button__small button__navigation"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="navigation__list-item">
+            <a
+              href="./contacts.html"
+              class="navigation__link button button__small button__navigation"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__assets-block list">
+        <form action="#" method="get" class="assets-block__searching">
+          <label for="asset-searching" class="searching__label hidden"
+            >Find asset</label
+          >
+          <input
+            type="text"
+            class="searching__input input input__small"
+            id="asset-searching"
+            placeholder="Search for Digital Assets"
+            required
+          />
+          <button type="submit" class="searching__button hidden">Search</button>
+        </form>
+        <a
+          href="#"
+          class="assets-block__button button button__primary button__square-medium"
+        >
+          <svg class="assets-block__icon icon">
+            <use xlink:href="./images/icons/sprite.svg#bag"></use>
+          </svg>
+          <span class="hidden">To catalog</span>
+        </a>
+      </div>
+    </header>
+    <main class="container__main">
+      <section class="contacts container__section list">
+        <div class="contacts__about-us list list__column">
+          <div class="about-us__introduction list list__column">
+            <h1 class="introduction__about-title heading__section">Contact</h1>
+            <p class="introduction__highlite-text">
+              <strong class="heading__main-title">
+                Get in Touch with Us
+              </strong>
+            </p>
+            <p class="introduction__text text__section">
+              We are here to help you navigate your creative journey. Reach out
+              for any questions, support, or feedback.
+            </p>
+          </div>
+          <a
+            href="./index.html"
+            class="about-us__to-shop button button__primary"
+            >Shop Now</a
+          >
+          <div class="about-us__contacts list list__column">
+            <a
+              href="tel:15551234567"
+              class="contacts__contact link text__section list"
+            >
+              <svg class="contact__image icon">
+                <use xlink:href="./images/icons/sprite.svg#phone" />
+              </svg>
+              +1 (555) 123-4567
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=support@pixelmart.com"
+              target="_blank"
+              class="contacts__contact link text__section list"
+            >
+              <svg class="contact__image icon">
+                <use xlink:href="./images/icons/sprite.svg#mail" />
+              </svg>
+              support@pixmart.com
+            </a>
+            <a
+              href="https://www.google.ru/maps/place/Pixmart/@12.6661441,15.2575709,3z/data=!4m6!3m5!1s0x13258b12119ada97:0x5c2b4c2814205c7!8m2!3d41.7951054!4d12.444515!16s%2Fg%2F11mvmwhcm4?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              class="contacts__contact link text__section list"
+            >
+              <svg class="contact__image icon">
+                <use xlink:href="./images/icons/sprite.svg#clock" />
+              </svg>
+              Monday to Friday : 9 AM - 5 PM EST
+            </a>
+          </div>
+          <div class="about-us__map">
+            <img
+              src="./images/pixmart-map.webp"
+              alt="location of Binabox office"
+              width="618"
+              height="314"
+            />
+            <a
+              href="https://www.google.ru/maps/place/Pixmart/@12.6661441,15.2575709,3z/data=!4m6!3m5!1s0x13258b12119ada97:0x5c2b4c2814205c7!8m2!3d41.7951054!4d12.444515!16s%2Fg%2F11mvmwhcm4?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              class="map__address-info"
+            >
+              <svg class="address-info__image icon">
+                <use xlink:href="./images/icons/sprite.svg#pin" />
+              </svg>
+              <span class="address__name-shop">PixMart HQ</span>
+              <span class="address__address">
+                123 Creative Ave, Design City, 45678
+              </span>
+            </a>
+          </div>
+        </div>
+        <form
+          action="#"
+          method="post"
+          class="contacts__contact-form list list__column"
+        >
+          <label
+            for="personal-info-name"
+            class="contact-form__field list list__column"
+          >
+            Full name
+            <input
+              type="text"
+              name="personal-info"
+              id="personal-info-name"
+              class="contact-form__input input input__form"
+              required
+              placeholder="Amelia Robert Johnson"
+              minlength="2"
+            />
+          </label>
+          <label
+            for="personal-info-email"
+            class="contact-form__field list list__column"
+          >
+            Email address
+            <input
+              type="email"
+              name="personal-info"
+              id="personal-info-email"
+              class="contact-form__input input input__form"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              placeholder="amelia.robertjohnson@pixmart.com"
+            />
+          </label>
+          <label
+            for="personal-info-subject"
+            class="contact-form__field list list__column"
+          >
+            Subject
+          </label>
+          <select
+            class="contact-form__select select button button__secondary"
+            name="personal-info"
+            id="personal-info-subject"
+          >
+            <option class="option" value="">General Inquiry</option>
+            <option class="option" value="newest">General Inquiry</option>
+            <option class="option" value="popular">General Inquiry</option>
+          </select>
+          <label
+            for="personal-info-message"
+            class="contact-form__field list list__column"
+            >Message
+            <textarea
+              name="personal-info"
+              id="personal-info-message"
+              class="contact-form__textarea input input__form"
+              placeholder="Enter your message ..."
+            ></textarea>
+          </label>
+          <div class="contact-form__finish-container">
+            <div class="contact-form__field finish-container__field list">
+              <input
+                type="checkbox"
+                class="contact-form__checkbox checkbox hidden"
+                name="personal-info"
+                value="newsletter"
+                id="personal-info-newsletter"
+              />
+              <label class="checkbox-label" for="personal-info-newsletter">
+                Subscribe me to Newsletter
+              </label>
+            </div>
+            <div class="contact-form__field finish-container__field list">
+              <input
+                type="checkbox"
+                class="contact-form__checkbox checkbox hidden"
+                name="personal-info"
+                value="secure"
+                id="personal-info-secure"
+                required
+              />
+              <label class="checkbox-label" for="personal-info-secure">
+                I have read the User & Privacy Policy
+              </label>
+            </div>
+            <button
+              class="contact-form__submit button button__primary"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer list list__column">
+      <div class="footer__summary list">
+        <div class="summary__information list list__column">
+          <a href="./index.html" class="information__link">
+            <img
+              src="./images/icons/logo.svg"
+              alt="Pixmart logo"
+              width="300"
+              height="58"
+              class="information__logo"
+            />
+          </a>
+          <p class="information__description">
+            Your premium digital assets solution with high quality and
+            comprehensive range of products and services.
+          </p>
+        </div>
+        <div class="summary__summary-lists">
+          <h2 class="summary-lists__title heading__card-title">Company</h2>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v1
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v2
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./index.html" class="list-item__link link">
+                Homepage v3
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> About Us </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./blog-details.html" class="list-item__link link">
+                Blog Articles
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="summary__summary-lists">
+          <h2 class="summary-lists__title heading__card-title">Products</h2>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Website
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Mobile App
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Social Media Feeds
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Presentation
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Product Mockups
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="./catalog.html" class="list-item__link link">
+                Illustrations
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="summary__summary-lists">
+          <h2 class="summary-lists__title heading__card-title">Account</h2>
+          <ul class="summary-lists__list list list__column">
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Your Cart </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Check Out </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Refund Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Company Policy
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" target="_blank" class="list-item__link link">
+                Send A Message
+              </a>
+            </li>
+            <li class="summary-lists__list-item">
+              <a href="#" class="list-item__link link"> Customer Support </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__cta list">
+        <div class="cta__cta-buttons list">
+          <a
+            href="#"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#twitter"></use>
+            </svg>
+            <span class="hidden">To twitter</span>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#facebook"></use>
+            </svg>
+            <span class="hidden">To facebook</span>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="cta-buttons__button button button__secondary button__square-big"
+          >
+            <svg class="cta-buttons__icon icon">
+              <use xlink:href="./images/icons/sprite.svg#telegram"></use>
+            </svg>
+            <span class="hidden">To telegram</span>
+          </a>
+        </div>
+        <form action="#" method="post" class="cta__newsletter list">
+          <label for="email" class="newsletter__label heading__form">
+            Subscribe to Design Newsletter
+          </label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            class="newsletter__input input input__large"
+            placeholder="Enter your email address ..."
+            required
+          />
+          <button
+            type="submit"
+            class="newsletter__button button button__primary button__large"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+      <div class="footer__documents list">
+        <div class="documents__document-list">
+          <ul class="document-list__list list">
+            <li class="document-list__list-item">
+              <a href="#" class="list-item__link list-item__document-link link"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="document-list__list-item">
+              <a href="#" class="list-item__link list-item__document-link link"
+                >Terms and Condition</a
+              >
+            </li>
+            <li class="document-list__list-item">
+              <a href="#" class="list-item__link list-item__document-link link"
+                >Site Map</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="documents__copyright">
+          Copyright © 2024 Pixmart. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.nice-select.js"></script>
+    <script src="./js/contacts-script.js"></script>
+  </body>
+</html>
